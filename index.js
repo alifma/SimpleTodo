@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./database');
+const path = require('path');
 
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Get all to-do items
 app.get('/todos', (req, res) => {
