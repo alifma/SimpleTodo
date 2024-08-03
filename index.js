@@ -4,7 +4,7 @@ const db = require('./database');
 const path = require('path');
 
 const app = express();
-const port = 3001;
+const port = 3003;
 
 app.use(bodyParser.json());
 
